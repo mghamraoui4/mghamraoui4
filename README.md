@@ -52,16 +52,6 @@ Passionné par l'informatique, je combine une rigueur juridique avec une experti
 
 ---
 
-<h3 align="center">📈 Mes Statistiques GitHub</h3>
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=mghamraoui4&show_icons=true&theme=radical&hide_border=true" height="180" alt="stats graph" />
-  
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=mghamraoui4&layout=compact&theme=radical&hide_border=true" height="180" alt="languages graph" />
-</div>
-
----
-
 ### 📫 Me contacter
-* [LinkedIn](LIEN_VERS_TON_LINKEDIN)
-* [Email](mailto:TON_EMAIL)
+* [LinkedIn](https://www.linkedin.com/in/mohamed-ghamraoui/)
+* [Email](mailto:mohamed.ghamraoui@intelcia.com)
