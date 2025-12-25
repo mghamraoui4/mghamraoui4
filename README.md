@@ -6,56 +6,51 @@ Passionné par l'informatique, je combine une rigueur juridique avec une experti
 
 ---
 
-## 🚀 Projet Actuel (2025)
+## 🚀 Projet Phare (2025)
 
-### [📁 Célia - Dashboard FTTH](LIEN_VERS_REPO_CELIA)
+### [📁 Célia - Dashboard FTTH](LIEN_VERS_TON_REPO_CELIA)
 **Outil d'aide à la décision pour le Help Desk (Rhôn'Télécom / SFR)**
-* **Le besoin :** Centraliser la gestion des échecs de raccordement fibre optique.
-* **La solution :** Dashboard React.js interactif pour le diagnostic rapide des codes erreurs.
-* **Impact :** Réduction du temps de traitement (DMT) et standardisation des procédures techniques.
-* **Stack :** React.js, Node.js, HTML5/CSS3.
+* **Le besoin :** Centraliser la gestion des échecs de raccordement fibre optique et simplifier l'accès à l'information.
+* **La solution :** Conception d'un Dashboard interactif centralisant les codes erreurs et les procédures techniques.
+* **Impact :** Réduction du temps de traitement (DMT), aide au diagnostic N1/N2 et standardisation des réponses.
+* **Stack Technique :** React.js, Node.js, HTML5/CSS3.
 
 ---
 
-## 💼 Réalisations Précédentes (Marjanemall / Intelcia)
+## 💼 Réalisations Professionnelles (Marjanemall / Intelcia)
 
-Ces projets ont été développés pour optimiser les opérations du service client e-commerce.
+*Projets développés pour optimiser les opérations du service client e-commerce.*
 
 ### 1. Architecture Plateforme Gestion Messages (GCP)
-*Proposition d'évolution et d'architecture Cloud pour une application de gestion de tickets.*
-* **Contexte :** Migration d'un outil local vers une infrastructure sécurisée et scalable.
-* **Architecture Conçue :**
-    * **Compute :** Google Cloud Run (Containerisation).
-    * **Data :** Cloud SQL (PostgreSQL) & Firebase (Auth/Roles).
-    * **Monitoring :** Cloud Logging & Security Command Center.
-* **Objectif :** Standardiser les réponses clients via des templates et assurer la traçabilité (Logs).
+*Proposition d'évolution vers une architecture Cloud sécurisée.*
+* **Contexte :** Migration d'un outil local vers une infrastructure conforme aux normes de sécurité Groupe.
+* **Architecture :** Google Cloud Run (Compute), Cloud SQL PostgreSQL (Data), Firebase (Auth).
+* **Objectif :** Standardiser les réponses via des templates et assurer la traçabilité (Logging/Audit).
 
 ### 2. Automatisation Planning (Google Apps Script)
-*Script ETL (Extract-Transform-Load) pour la gestion des plannings RH.*
-* **Le problème :** Restructuration manuelle longue et propice aux erreurs des exports bruts hebdomadaires.
-* **La solution :** Développement d'un script créant automatiquement une "Matrix" (Matricule vs Dates) avec gestion des priorités (Shift > Repas > OFF).
-* **Résultat :** Traitement instantané des exports bruts sans altération des données sources.
+*Script ETL (Extract-Transform-Load) pour la gestion RH.*
+* **Le problème :** Traitement manuel long et complexe des exports bruts hebdomadaires.
+* **La solution :** Script automatisé générant une "Matrix" (Matricule vs Dates) avec gestion des priorités (Shift > Repas > OFF).
+* **Résultat :** Restructuration instantanée des plannings sans erreur humaine.
 
 ### 3. Interface Process & Knowledge Management
-*Refonte de la base de connaissance pour les conseillers client.*
-* **Réalisation :** Création d'une interface web (Google Sites) centralisant les processus métiers (Retours, Remboursements, SAV).
-* **Fonctionnalités :** Navigation intuitive, scripts d'appels intégrés et conformité aux macros CDO.
-* **Impact :** Validation client (Donneur d'ordre) réussie et amélioration de la montée en compétence des agents.
+*Refonte de la base de connaissance pour les conseillers.*
+* **Réalisation :** Création d'un portail web (Google Sites) centralisant les processus métiers (Retours, Remboursements).
+* **Impact :** Validation par le client donneur d'ordre et amélioration de la montée en compétence des agents.
 
 ---
 
 ## 🛠️ Boîte à Outils Technique
 
-| Domaine | Technologies |
+| Domaine | Technologies & Compétences |
 | :--- | :--- |
 | **Frontend** | React.js, HTML5, CSS3, Google Sites UI |
-| **Backend & Cloud** | Node.js, Google Cloud Platform (Arch.), Firebase |
-| **Scripting & Data** | Google Apps Script, Python, SQL (PostgreSQL) |
-| **Réseaux** | CCNA (En cours), FTTH, Diagnostic N1/N2 |
+| **Backend & Cloud** | Node.js, Google Cloud Platform (Architecture), Firebase |
+| **Data & Scripting** | Python, Google Apps Script, SQL (PostgreSQL, MariaDB) |
+| **Réseaux** | Certification CISCO (En cours), FTTH, Diagnostic N1/N2 |
+| **Outils** | Git, GitHub, VS Code, macOS |
 
 ---
-
-### 📈 GitHub Stats
 
 <h3 align="center">📈 Mes Statistiques GitHub</h3>
 
@@ -64,8 +59,9 @@ Ces projets ont été développés pour optimiser les opérations du service cli
   
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=mghamraoui4&layout=compact&theme=radical&hide_border=true" height="180" alt="languages graph" />
 </div>
+
 ---
 
 ### 📫 Me contacter
-* [LinkedIn](TON_LIEN_LINKEDIN)
+* [LinkedIn](LIEN_VERS_TON_LINKEDIN)
 * [Email](mailto:TON_EMAIL)
