@@ -57,8 +57,13 @@ Ces projets ont été développés pour optimiser les opérations du service cli
 
 ### 📈 GitHub Stats
 
-![Tes Stats GitHub](https://github-readme-stats.vercel.app/api?username=mghamraoui4&show_icons=true&theme=radical&hide_border=true)
+<h3 align="center">📈 Mes Statistiques GitHub</h3>
 
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=mghamraoui4&show_icons=true&theme=radical&hide_border=true" height="180" alt="stats graph" />
+  
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=mghamraoui4&layout=compact&theme=radical&hide_border=true" height="180" alt="languages graph" />
+</div>
 ---
 
 ### 📫 Me contacter
