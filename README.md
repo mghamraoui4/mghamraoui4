@@ -21,7 +21,7 @@ Passionné par l'informatique, je combine une rigueur juridique avec une experti
 
 *Projets développés pour optimiser les opérations du service client e-commerce.*
 
-### 1. Architecture Plateforme Gestion Messages (GCP)(https://github.com/mghamraoui4/Scripts_marjanemall)
+### [1. Architecture Plateforme Gestion Messages (GCP)](https://github.com/mghamraoui4/Scripts_marjanemall)
 *Proposition d'évolution vers une architecture Cloud sécurisée.*
 * **Contexte :** Migration d'un outil local vers une infrastructure conforme aux normes de sécurité Groupe.
 * **Architecture :** Google Cloud Run (Compute), Cloud SQL PostgreSQL (Data), Firebase (Auth).
@@ -33,7 +33,7 @@ Passionné par l'informatique, je combine une rigueur juridique avec une experti
 * **La solution :** Script automatisé générant une "Matrix" (Matricule vs Dates) avec gestion des priorités (Shift > Repas > OFF).
 * **Résultat :** Restructuration instantanée des plannings sans erreur humaine.
 
-### 3. Interface Process & Knowledge Management(https://github.com/mghamraoui4/base_connaissance_marjanemall)
+### [3. Interface Process & Knowledge Management](https://github.com/mghamraoui4/base_connaissance_marjanemall)
 *Refonte de la base de connaissance pour les conseillers.*
 * **Réalisation :** Création d'un portail web (Google Sites) centralisant les processus métiers (Retours, Remboursements).
 * **Impact :** Validation par le client donneur d'ordre et amélioration de la montée en compétence des agents.
