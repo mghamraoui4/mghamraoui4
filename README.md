@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner.png" alt="Mohamed GHAMRAOUI — Je relie l’infrastructure au code." width="100%">
+  <img src="banner.png" alt="Mohamed GHAMRAOUI — Je relie l’infrastructure au code." width="100%">
 </p>
 
 ### Bonjour, je suis Mohamed 👋
