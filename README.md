@@ -1,57 +1,49 @@
-# Salut, je suis Mohamed Ghamraoui 👋
+<p align="center">
+  <img src="assets/banner.png" alt="Mohamed GHAMRAOUI — Je relie l’infrastructure au code." width="100%">
+</p>
 
-### Technicien Réseaux & Télécoms | Développeur Full Stack Autodidacte
+### Bonjour, je suis Mohamed 👋
 
-Passionné par l'informatique, je combine une rigueur juridique avec une expertise technique en développement et réseaux. Mon objectif : créer des outils qui automatisent les tâches répétitives et optimisent les processus opérationnels.
+Technicien **Réseaux & Télécom** le jour, **développeur fullstack** le reste du temps.
+Je travaille à la frontière entre le terrain et le logiciel : comprendre comment l’infrastructure fonctionne, puis construire les outils qui la rendent plus simple à piloter.
 
----
-
-## 🚀 Projet Phare (2025)
-
-### [📁 Célia - Dashboard FTTH](https://github.com/mghamraoui4/Celia-dashboard-V3.0.3)
-**Outil d'aide à la décision pour le Help Desk (Rhôn'Télécom / SFR)**
-* **Le besoin :** Centraliser la gestion des échecs de raccordement fibre optique et simplifier l'accès à l'information.
-* **La solution :** Conception d'un Dashboard interactif centralisant les codes erreurs et les procédures techniques.
-* **Impact :** Réduction du temps de traitement (DMT), aide au diagnostic N1/N2 et standardisation des réponses.
-* **Stack Technique :** React.js, Node.js, HTML5/CSS3.
+- 🔭 Je construis des applications web métier, du back-end à l’interface
+- 🌱 J’approfondis le **DevOps** : conteneurs, CI/CD, cloud
+- 🎓 MSc Software Engineering en cours
+- ⚖️ Parcours atypique : du droit aux réseaux, des réseaux au code
 
 ---
 
-## 💼 Réalisations Professionnelles (Marjanemall / Intelcia)
+### 🧰 Stack
 
-*Projets développés pour optimiser les opérations du service client e-commerce.*
+**Front-end**
+![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
 
-### [1. Architecture Plateforme Gestion Messages (GCP)](https://github.com/mghamraoui4/Scripts_marjanemall)
-*Proposition d'évolution vers une architecture Cloud sécurisée.*
-* **Contexte :** Migration d'un outil local vers une infrastructure conforme aux normes de sécurité Groupe.
-* **Architecture :** Google Cloud Run (Compute), Cloud SQL PostgreSQL (Data), Firebase (Auth).
-* **Objectif :** Standardiser les réponses via des templates et assurer la traçabilité (Logging/Audit).
+**Back-end & données**
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
+![Express](https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white)
 
-### 2. Automatisation Planning (Google Apps Script)
-*Script ETL (Extract-Transform-Load) pour la gestion RH.*
-* **Le problème :** Traitement manuel long et complexe des exports bruts hebdomadaires.
-* **La solution :** Script automatisé générant une "Matrix" (Matricule vs Dates) avec gestion des priorités (Shift > Repas > OFF).
-* **Résultat :** Restructuration instantanée des plannings sans erreur humaine.
+**DevOps & outils**
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/CI%2FCD-2088FF?style=flat-square&logo=githubactions&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
+![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
 
-### [3. Interface Process & Knowledge Management](https://github.com/mghamraoui4/base_connaissance_marjanemall)
-*Refonte de la base de connaissance pour les conseillers.*
-* **Réalisation :** Création d'un portail web (Google Sites) centralisant les processus métiers (Retours, Remboursements).
-* **Impact :** Validation par le client donneur d'ordre et amélioration de la montée en compétence des agents.
-
----
-
-## 🛠️ Boîte à Outils Technique
-
-| Domaine | Technologies & Compétences |
-| :--- | :--- |
-| **Frontend** | React.js, HTML5, CSS3, Google Sites UI |
-| **Backend & Cloud** | Node.js, Google Cloud Platform (Architecture), Firebase |
-| **Data & Scripting** | Python, Google Apps Script, SQL (PostgreSQL, MariaDB) |
-| **Réseaux** | Certification CISCO (En cours), FTTH, Diagnostic N1/N2 |
-| **Outils** | Git, GitHub, VS Code, macOS |
+**Réseaux & Télécom**
+![FTTH](https://img.shields.io/badge/FTTH-463996?style=flat-square)
+![Réseaux](https://img.shields.io/badge/Réseaux_IP-9470F6?style=flat-square)
 
 ---
 
 ### 📫 Me contacter
-* [LinkedIn](https://www.linkedin.com/in/mohamed-ghamraoui/)
-* [Email](mailto:mohamed.ghamraoui@intelcia.com)
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/[ton-profil])
+![Casablanca](https://img.shields.io/badge/📍_Casablanca,_Maroc-463996?style=for-the-badge)
+
+<p align="center"><sub>Construis la version que tu admires.</sub></p>
