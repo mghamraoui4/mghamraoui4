@@ -1,6 +1,6 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="banner-light.png">
-  <source media="(prefers-color-scheme: light)" srcset="banner-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="banner-light.png">
+  <source media="(prefers-color-scheme: dark)" srcset="banner-dark.png">
   <img src="assets/banner-light.png" alt="Mohamed GHAMRAOUI — Réseaux & Télécom · Fullstack · DevOps" width="100%">
 </picture>
 
