@@ -8,7 +8,7 @@ const CONFIG = {
   email: "contact.mghamraoui@gmail.com",
   calendly: "", // booking link, hidden when empty
   hours: { start: 9, end: 21 }, // availability window, Africa/Casablanca
-  showPrices: true,
+  showPrices: false,
   currency: "DH",
 };
 
@@ -16,7 +16,7 @@ const CONFIG = {
 const NEEDS = {
   site: {
     label: "Site vitrine",
-    price: [3000, 8000],
+    price: [2000, 5000],
     weeks: [1, 2],
     gets: [
       "Design sur mesure, rapide et mobile",
@@ -26,7 +26,7 @@ const NEEDS = {
   },
   app: {
     label: "Application web",
-    price: [15000, 45000],
+    price: [10000, 30000],
     weeks: [4, 10],
     gets: [
       "Cadrage de l'idée et parcours utilisateur",
@@ -36,7 +36,7 @@ const NEEDS = {
   },
   backoffice: {
     label: "Outil de gestion",
-    price: [10000, 35000],
+    price: [7000, 22000],
     weeks: [3, 8],
     gets: [
       "Toutes vos données au même endroit",
@@ -46,7 +46,7 @@ const NEEDS = {
   },
   auto: {
     label: "Automatisation",
-    price: [3000, 15000],
+    price: [2000, 9000],
     weeks: [1, 3],
     gets: [
       "Analyse de la tâche à automatiser",
@@ -56,7 +56,7 @@ const NEEDS = {
   },
   fix: {
     label: "Amélioration de l'existant",
-    price: [1500, 10000],
+    price: [1000, 6000],
     weeks: [1, 3],
     gets: [
       "Diagnostic complet de l'outil",

@@ -172,12 +172,10 @@
         ? "Plus qu'une question"
         : `Encore ${remaining}${NBSP}questions`;
 
-    let headline = `Livraison en <em>${delay}</em>`;
-    if (custom) headline = "Sur <em>devis</em>";
-    else if (showPrice) headline = `${money(low)} <em>–</em> ${money(high)}`;
+    const headline = showPrice ? `${money(low)} <em>–</em> ${money(high)}` : "Sur <em>devis</em>";
 
     const items = [
-      showPrice ? `Délai estimé${NBSP}: ${delay}` : "",
+      custom ? "" : `Délai estimé${NBSP}: ${delay}`,
       ...need.gets,
       state.when === "urgent" ? "Démarrage prioritaire possible, à confirmer ensemble" : "",
     ].filter(Boolean);
@@ -189,7 +187,7 @@
       <button class="btn primary" id="toForm" type="button" ${done ? "" : "disabled"}>
         ${ctaLabel} <svg class="i arr" aria-hidden="true"><use href="#i-arrow"/></svg>
       </button>
-      <p class="note">Estimation indicative. Le devis final, fixe et détaillé, est établi après un premier échange gratuit.</p>`;
+      <p class="note">Devis fixe et détaillé, gratuit et sans engagement, établi après un premier échange.</p>`;
 
     estimate = [need.label, state.size ? size.label : "", state.when ? `délai ${WHEN[state.when]}` : ""]
       .filter(Boolean)
