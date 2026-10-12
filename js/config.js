@@ -4,7 +4,8 @@
  */
 const CONFIG = {
   web3formsKey: "", // Web3Forms access key
-  whatsapp: "212708262334", // international format, digits only
+  whatsapp: "212708282334", // international format, digits only
+  email: "contact.mghamraoui@gmail.com",
   calendly: "", // booking link, hidden when empty
   hours: { start: 9, end: 21 }, // availability window, Africa/Casablanca
   showPrices: true,

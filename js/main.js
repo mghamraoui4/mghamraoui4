@@ -354,12 +354,18 @@
     const data = Object.fromEntries(new FormData(form));
     data.simulation = $("#recap").classList.contains("on") ? estimate : "Aucune";
 
-    // No form endpoint configured: hand the request over to WhatsApp instead.
+    // No form endpoint configured: open the visitor's mail client with the request pre-filled.
     if (!CONFIG.web3formsKey) {
-      const text = `Bonjour Mohamed, je suis ${data.nom} (${data.email}). ${data.message}${
-        data.simulation !== "Aucune" ? `\nSimulation${NBSP}: ${data.simulation}` : ""
-      }`;
-      window.open(whatsappUrl(text), "_blank", "noopener");
+      const lines = [
+        `Nom${NBSP}: ${data.nom}`,
+        `E-mail${NBSP}: ${data.email}`,
+        data.telephone ? `Téléphone${NBSP}: ${data.telephone}` : "",
+        data.simulation !== "Aucune" ? `Simulation${NBSP}: ${data.simulation}` : "",
+        "",
+        data.message,
+      ].filter((line, i) => line || i === 4);
+      const subject = `[${data.type}] Demande de ${data.nom}`;
+      location.href = `mailto:${CONFIG.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join("\n"))}`;
       return;
     }
 
