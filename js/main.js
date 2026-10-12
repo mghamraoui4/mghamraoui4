@@ -6,30 +6,25 @@
   const root = document.documentElement;
   const NBSP = " ";
 
-  const safeStorage = (store) => ({
+  const storage = {
     get(key) {
       try {
-        return store.getItem(key);
+        return localStorage.getItem(key);
       } catch {
         return null;
       }
     },
     set(key, value) {
       try {
-        store.setItem(key, value);
+        localStorage.setItem(key, value);
       } catch {
         /* storage unavailable (private mode) */
       }
     },
-  });
-  const local = safeStorage(window.localStorage);
-  const session = safeStorage(window.sessionStorage);
-
-  let estimate = "";
-  let formSent = false;
+  };
 
   /* ---------- Theme ---------- */
-  const savedTheme = local.get("theme");
+  const savedTheme = storage.get("theme");
   if (savedTheme) root.dataset.theme = savedTheme;
 
   $("#theme").addEventListener("click", () => {
@@ -37,33 +32,20 @@
       ? root.dataset.theme === "dark"
       : matchMedia("(prefers-color-scheme: dark)").matches;
     root.dataset.theme = isDark ? "light" : "dark";
-    local.set("theme", root.dataset.theme);
+    storage.set("theme", root.dataset.theme);
   });
 
   $("#year").textContent = new Date().getFullYear();
 
-  /* ---------- WhatsApp & booking links ---------- */
+  /* ---------- WhatsApp links ---------- */
   const whatsappUrl = (text) => `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(text)}`;
-
-  const defaultWhatsappText = () =>
-    `Bonjour Mohamed, je viens de votre site.${estimate ? ` Mon besoin${NBSP}: ${estimate}.` : ""} `;
+  const greeting = "Bonjour Mohamed, je viens de votre site. ";
 
   $$(".js-wa").forEach((link) => {
+    link.href = whatsappUrl(greeting);
     link.target = "_blank";
     link.rel = "noopener";
-    link.href = whatsappUrl(defaultWhatsappText());
-    link.addEventListener("click", () => {
-      link.href = whatsappUrl(defaultWhatsappText());
-    });
   });
-
-  if (CONFIG.calendly) {
-    const cal = $("#cal-link");
-    cal.href = CONFIG.calendly;
-    cal.target = "_blank";
-    cal.rel = "noopener";
-    cal.hidden = false;
-  }
 
   /* ---------- Availability badge (Casablanca time) ---------- */
   try {
@@ -118,91 +100,6 @@
     el.style.transitionDelay = `${(i % 3) * 70}ms`;
     revealer.observe(el);
   });
-
-  /* ---------- Project estimator ---------- */
-  const state = { need: null, size: null, when: null };
-  const answered = () => Object.values(state).filter(Boolean).length;
-
-  const money = (n) => `${(Math.round(n / 500) * 500).toLocaleString("fr-FR")}${NBSP}${CONFIG.currency}`;
-
-  function select(key, value) {
-    state[key] = value;
-    $$(`.opts[data-key="${key}"] .opt`).forEach((btn) =>
-      btn.setAttribute("aria-pressed", String(btn.dataset.v === value)),
-    );
-    const count = answered();
-    $("#progbar").style.width = `${(count / 3) * 100}%`;
-    $("#progtxt").textContent = `${count} / 3`;
-    renderEstimate();
-  }
-
-  $$(".opts").forEach((group) =>
-    group.addEventListener("click", (e) => {
-      const btn = e.target.closest(".opt");
-      if (btn) select(group.dataset.key, btn.dataset.v);
-    }),
-  );
-
-  $$(".pain[data-need]").forEach((card) =>
-    card.addEventListener("click", () => {
-      select("need", card.dataset.need);
-      $("#estimer").scrollIntoView({ behavior: "smooth" });
-    }),
-  );
-
-  function renderEstimate() {
-    if (!state.need) return;
-
-    const need = NEEDS[state.need];
-    const size = SIZES[state.size || "m"];
-    const custom = !need.price;
-    const showPrice = CONFIG.showPrices && !custom;
-
-    const low = custom ? 0 : need.price[0] * size.k;
-    const high = custom ? 0 : need.price[1] * size.k;
-    const w0 = custom ? 0 : Math.max(1, Math.round(need.weeks[0] * size.k));
-    const w1 = custom ? 0 : Math.max(w0, Math.round(need.weeks[1] * size.k));
-    const delay = w1 <= 1 ? `environ 1${NBSP}semaine` : `${w0} à ${w1}${NBSP}semaines`;
-
-    const remaining = 3 - answered();
-    const done = remaining === 0;
-    const ctaLabel = done
-      ? "Recevoir mon devis gratuit"
-      : remaining === 1
-        ? "Plus qu'une question"
-        : `Encore ${remaining}${NBSP}questions`;
-
-    const headline = showPrice ? `${money(low)} <em>–</em> ${money(high)}` : "Sur <em>devis</em>";
-
-    const items = [
-      custom ? "" : `Délai estimé${NBSP}: ${delay}`,
-      ...need.gets,
-      state.when === "urgent" ? "Démarrage prioritaire possible, à confirmer ensemble" : "",
-    ].filter(Boolean);
-
-    $("#result").innerHTML = `
-      <div class="k">${need.label}${state.size ? ` · ${size.label}` : ""}</div>
-      <div class="big">${headline}</div>
-      <ul>${items.map((item) => `<li>${item}</li>`).join("")}</ul>
-      <button class="btn primary" id="toForm" type="button" ${done ? "" : "disabled"}>
-        ${ctaLabel} <svg class="i arr" aria-hidden="true"><use href="#i-arrow"/></svg>
-      </button>
-      <p class="note">Devis fixe et détaillé, gratuit et sans engagement, établi après un premier échange.</p>`;
-
-    estimate = [need.label, state.size ? size.label : "", state.when ? `délai ${WHEN[state.when]}` : ""]
-      .filter(Boolean)
-      .join(", ");
-    if (showPrice) estimate += ` (estimation ${money(low)} – ${money(high)})`;
-
-    $("#toForm").addEventListener("click", () => {
-      $("#recap-txt").textContent = `Simulation jointe${NBSP}: ${estimate}`;
-      $("#recap").classList.add("on");
-      contact.scrollIntoView({ behavior: "smooth" });
-      setTimeout(() => $('[name="nom"]').focus({ preventScroll: true }), 700);
-    });
-  }
-
-  $("#recap-x").addEventListener("click", () => $("#recap").classList.remove("on"));
 
   /* ---------- Hero fibre animation ---------- */
   const canvas = $("#fiber");
@@ -300,32 +197,6 @@
     if (reduceMotion) draw();
   });
 
-  /* ---------- Exit-intent modal (desktop, once per session) ---------- */
-  const modal = $("#modal");
-  const openedAt = Date.now();
-
-  const openModal = () => {
-    if (formSent || session.get("exit") || Date.now() - openedAt < 20000) return;
-    session.set("exit", "1");
-    modal.classList.add("on");
-    $("#mclose").focus();
-  };
-  const closeModal = () => modal.classList.remove("on");
-
-  if (matchMedia("(pointer: fine)").matches) {
-    document.addEventListener("mouseout", (e) => {
-      if (!e.relatedTarget && e.clientY <= 0) openModal();
-    });
-  }
-  $("#mclose").addEventListener("click", closeModal);
-  $("#mest").addEventListener("click", closeModal);
-  modal.addEventListener("click", (e) => {
-    if (e.target === modal || e.target.closest(".js-wa")) closeModal();
-  });
-  addEventListener("keydown", (e) => {
-    if (e.key === "Escape") closeModal();
-  });
-
   /* ---------- Contact form ---------- */
   const form = $("#form");
   const status = $("#msg");
@@ -344,32 +215,33 @@
     status.textContent = "";
 
     if (!form.checkValidity()) {
-      showError("Merci d'indiquer votre nom, un e-mail valide et votre besoin.");
+      showError("Merci d'indiquer votre nom, un e-mail valide et votre message.");
       form.querySelector(":invalid").focus();
       return;
     }
 
     const data = Object.fromEntries(new FormData(form));
-    data.simulation = $("#recap").classList.contains("on") ? estimate : "Aucune";
+    const subject = `[${data.besoin}] Demande de devis de ${data.nom}`;
 
     // No form endpoint configured: open the visitor's mail client with the request pre-filled.
     if (!CONFIG.web3formsKey) {
-      const lines = [
+      const body = [
+        `Besoin${NBSP}: ${data.besoin}`,
         `Nom${NBSP}: ${data.nom}`,
         `E-mail${NBSP}: ${data.email}`,
         data.telephone ? `Téléphone${NBSP}: ${data.telephone}` : "",
-        data.simulation !== "Aucune" ? `Simulation${NBSP}: ${data.simulation}` : "",
         "",
         data.message,
-      ].filter((line, i) => line || i === 4);
-      const subject = `[${data.type}] Demande de ${data.nom}`;
-      location.href = `mailto:${CONFIG.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join("\n"))}`;
+      ]
+        .filter((line, i) => line || i === 4)
+        .join("\n");
+      location.href = `mailto:${CONFIG.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
       return;
     }
 
     Object.assign(data, {
       access_key: CONFIG.web3formsKey,
-      subject: `[${data.type}] Nouvelle demande de ${data.nom}`,
+      subject,
       from_name: location.hostname || "Site web",
       replyto: data.email,
     });
@@ -386,7 +258,6 @@
       const json = await res.json();
       if (!json.success) throw new Error(json.message);
 
-      formSent = true;
       form.hidden = true;
       $("#sent").classList.add("on");
     } catch {

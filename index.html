@@ -36,7 +36,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap"
     />
-    <link rel="stylesheet" href="css/styles.css?v=202610121202" />
+    <link rel="stylesheet" href="css/styles.css?v=202610121207" />
 
     <script type="application/ld+json">
       {
@@ -142,10 +142,9 @@
       <div class="wrap">
         <a href="#top" class="logo"><span class="dot"></span>Mohamed&nbsp;GH.</a>
         <div class="nav-links">
-          <a href="#estimer" class="hide-m">Devis gratuit</a>
+          <a href="#services" class="hide-m">Services</a>
           <a href="#projets" class="hide-m">Réalisations</a>
-          <a href="#faq" class="hide-m">FAQ</a>
-          <a href="#contact" class="pill">Me contacter</a>
+          <a href="#contact" class="pill">Demander un devis</a>
           <button class="theme" id="theme" aria-label="Changer de thème">
             <svg
               width="16"
@@ -163,799 +162,331 @@
       </div>
     </nav>
 
-    <!-- HERO -->
     <header class="hero" id="top">
       <canvas id="fiber" aria-hidden="true"></canvas>
       <div class="wrap">
         <div class="status reveal">
           <span class="dot"></span><span id="live">Disponible pour de nouveaux projets</span>
         </div>
-        <h1 class="reveal">Votre idée mérite mieux <em>qu'un tableur Excel.</em></h1>
+        <h1 class="reveal">Des outils web <em>qui vous font gagner du temps.</em></h1>
         <p class="lede reveal">
-          Je crée des <strong>sites, applications et outils web sur mesure</strong> qui font le travail
-          répétitif à votre place. Vous m'expliquez votre problème avec vos mots, je m'occupe de la technique.
+          Sites, applications et automatisations sur mesure. Vous expliquez votre besoin, je m'occupe du
+          reste.
         </p>
         <div class="actions reveal">
-          <a href="#estimer" class="btn primary"
-            >Demander un devis gratuit <svg class="i arr"><use href="#i-arrow" /></svg
+          <a href="#contact" class="btn primary"
+            >Demander un devis gratuit <svg class="i arr" aria-hidden="true"><use href="#i-arrow" /></svg
           ></a>
           <a href="#" class="btn wa js-wa"
-            ><svg class="i"><use href="#i-wa" /></svg>Écrire sur WhatsApp</a
+            ><svg class="i" aria-hidden="true"><use href="#i-wa" /></svg>WhatsApp</a
           >
         </div>
         <div class="reassure reveal">
           <span
-            ><svg class="i"><use href="#i-check" /></svg>Premier échange gratuit</span
+            ><svg class="i" aria-hidden="true"><use href="#i-check" /></svg>Devis gratuit</span
           >
           <span
-            ><svg class="i"><use href="#i-check" /></svg>Réponse sous 24 h</span
+            ><svg class="i" aria-hidden="true"><use href="#i-check" /></svg>Réponse sous 24 h</span
           >
           <span
-            ><svg class="i"><use href="#i-check" /></svg>Sans engagement</span
+            ><svg class="i" aria-hidden="true"><use href="#i-check" /></svg>Sans engagement</span
           >
         </div>
       </div>
     </header>
 
     <main>
-      <!-- PAINS -->
-      <section id="besoin">
+      <section id="services">
         <div class="wrap">
-          <div class="label mono reveal">Vous vous reconnaissez ?</div>
-          <h2 class="reveal">Cliquez sur <em>votre situation.</em></h2>
-          <p class="sub reveal">
-            Pas besoin de connaître le jargon. Choisissez ce qui vous ressemble, je vous montre ce qu'on peut
-            faire.
-          </p>
-          <div class="pains">
-            <button class="pain reveal" data-need="backoffice">
-              <span class="q">« On gère tout sur Excel et WhatsApp, on s'y perd. »</span
-              ><span class="a"
-                >Un outil unique où toute l'équipe retrouve les infos, sans doublons ni oublis.</span
-              ><span class="go">→ Voir la solution</span>
-            </button>
-            <button class="pain reveal" data-need="auto">
-              <span class="q">« On passe des heures sur des tâches répétitives. »</span
-              ><span class="a">Mails triés, rapports envoyés, tâches réparties : automatiquement.</span
-              ><span class="go">→ Voir la solution</span>
-            </button>
-            <button class="pain reveal" data-need="site">
-              <span class="q">« Mes clients ne me trouvent pas en ligne. »</span
-              ><span class="a">Un site rapide, clair, qui donne envie de vous contacter.</span
-              ><span class="go">→ Voir la solution</span>
-            </button>
-            <button class="pain reveal" data-need="app">
-              <span class="q">« J'ai une idée d'application. »</span
-              ><span class="a"
-                >On la transforme en produit concret, étape par étape, sans dérapage de budget.</span
-              ><span class="go">→ Voir la solution</span>
-            </button>
-            <button class="pain reveal" data-need="fix">
-              <span class="q">« Mon outil actuel est lent ou bugué. »</span
-              ><span class="a">Diagnostic, corrections et améliorations, sans tout reconstruire.</span
-              ><span class="go">→ Voir la solution</span>
-            </button>
-            <a class="pain last reveal" href="#contact"
-              ><span class="q">Autre chose en tête ?</span
-              ><span class="a">Racontez-moi, on trouve la solution ensemble.</span
-              ><span class="go">→ M'écrire</span></a
-            >
-          </div>
-        </div>
-      </section>
-
-      <!-- CONFIGURATOR -->
-      <section id="estimer" class="alt">
-        <div class="wrap">
-          <div class="label mono reveal">Devis gratuit</div>
-          <h2 class="reveal">Votre projet en <em>3 clics.</em></h2>
-          <p class="sub reveal">
-            Trois questions pour cadrer votre besoin, puis un devis précis et gratuit sous 48 h.
-          </p>
-          <div class="config">
-            <div class="panel reveal">
-              <div class="prog">
-                <div class="prog-track"><span id="progbar"></span></div>
-                <small id="progtxt">0 / 3</small>
-              </div>
-              <div class="q-step">
-                <div class="q-title"><span class="n mono">01</span>De quoi avez-vous besoin ?</div>
-                <div class="opts cards" data-key="need" role="group">
-                  <button class="opt" data-v="site" aria-pressed="false">
-                    <span class="ico"
-                      ><svg
-                        class="i"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.7"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      >
-                        <circle cx="12" cy="12" r="9" />
-                        <path
-                          d="M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18"
-                        /></svg></span
-                    ><span><b>Site vitrine</b><small>Être visible en ligne</small></span
-                    ><span class="tick"
-                      ><svg viewBox="0 0 24 24">
-                        <path
-                          d="M5 12.5l4.5 4.5L19 7.5"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="3"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        /></svg
-                    ></span></button
-                  ><button class="opt" data-v="app" aria-pressed="false">
-                    <span class="ico"
-                      ><svg
-                        class="i"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.7"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      >
-                        <rect x="3" y="4" width="18" height="16" rx="2.5" />
-                        <path d="M3 9h18M7 6.5h.01M10 6.5h.01" /></svg></span
-                    ><span><b>Application web</b><small>Concrétiser une idée</small></span
-                    ><span class="tick"
-                      ><svg viewBox="0 0 24 24">
-                        <path
-                          d="M5 12.5l4.5 4.5L19 7.5"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="3"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        /></svg
-                    ></span></button
-                  ><button class="opt" data-v="backoffice" aria-pressed="false">
-                    <span class="ico"
-                      ><svg
-                        class="i"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.7"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      >
-                        <rect x="3" y="3" width="7.5" height="9" rx="1.5" />
-                        <rect x="13.5" y="3" width="7.5" height="5" rx="1.5" />
-                        <rect x="13.5" y="11" width="7.5" height="10" rx="1.5" />
-                        <rect x="3" y="15" width="7.5" height="6" rx="1.5" /></svg></span
-                    ><span><b>Outil de gestion</b><small>Dashboard, suivi d'équipe</small></span
-                    ><span class="tick"
-                      ><svg viewBox="0 0 24 24">
-                        <path
-                          d="M5 12.5l4.5 4.5L19 7.5"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="3"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        /></svg
-                    ></span></button
-                  ><button class="opt" data-v="auto" aria-pressed="false">
-                    <span class="ico"
-                      ><svg
-                        class="i"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.7"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      >
-                        <path d="M13 3L5 13.5h6L10 21l8-10.5h-6z" /></svg></span
-                    ><span><b>Automatisation</b><small>Gagner des heures</small></span
-                    ><span class="tick"
-                      ><svg viewBox="0 0 24 24">
-                        <path
-                          d="M5 12.5l4.5 4.5L19 7.5"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="3"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        /></svg
-                    ></span></button
-                  ><button class="opt" data-v="fix" aria-pressed="false">
-                    <span class="ico"
-                      ><svg
-                        class="i"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.7"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      >
-                        <path d="M14.5 6.5a4 4 0 0 0 5 5l-8.5 8.5a2.1 2.1 0 0 1-3-3z" />
-                        <path d="M14.5 6.5l3-3" /></svg></span
-                    ><span><b>Améliorer l'existant</b><small>Bugs, lenteurs, ajouts</small></span
-                    ><span class="tick"
-                      ><svg viewBox="0 0 24 24">
-                        <path
-                          d="M5 12.5l4.5 4.5L19 7.5"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="3"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        /></svg
-                    ></span></button
-                  ><button class="opt" data-v="other" aria-pressed="false">
-                    <span class="ico"
-                      ><svg
-                        class="i"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.7"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      >
-                        <path d="M4 5h16v11H9l-5 4z" />
-                        <path d="M8.5 10.5h.01M12 10.5h.01M15.5 10.5h.01" /></svg></span
-                    ><span><b>Autre chose</b><small>On en parle ensemble</small></span
-                    ><span class="tick"
-                      ><svg viewBox="0 0 24 24">
-                        <path
-                          d="M5 12.5l4.5 4.5L19 7.5"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="3"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        /></svg
-                    ></span>
-                  </button>
-                </div>
-              </div>
-              <div class="q-step">
-                <div class="q-title"><span class="n mono">02</span>Quelle ampleur ?</div>
-                <div class="opts seg" data-key="size" role="group">
-                  <button class="opt" data-v="s" aria-pressed="false">Simple<small>l'essentiel</small></button
-                  ><button class="opt" data-v="m" aria-pressed="false">
-                    Standard<small>le plus courant</small></button
-                  ><button class="opt" data-v="l" aria-pressed="false">
-                    Complet<small>plusieurs modules</small>
-                  </button>
-                </div>
-              </div>
-              <div class="q-step">
-                <div class="q-title"><span class="n mono">03</span>Pour quand ?</div>
-                <div class="opts seg" data-key="when" role="group">
-                  <button class="opt" data-v="urgent" aria-pressed="false">
-                    Urgent<small>au plus vite</small></button
-                  ><button class="opt" data-v="month" aria-pressed="false">
-                    Ce mois-ci<small>sous 4 semaines</small></button
-                  ><button class="opt" data-v="flex" aria-pressed="false">
-                    Flexible<small>pas de date fixe</small>
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="result reveal" aria-live="polite">
-              <div class="result-bar"><i></i><i></i><i></i><small>devis.sur-mesure</small></div>
-              <div class="result-body" id="result">
-                <div class="k">Votre projet</div>
-                <div class="big empty">Répondez aux 3 questions <em>→</em></div>
-                <p class="empty">Le résultat s'affiche ici instantanément.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- PROJECTS -->
-      <section id="projets">
-        <div class="wrap">
-          <div class="label mono reveal">Réalisations</div>
-          <h2 class="reveal">Pas des maquettes. <em>Des outils qui tournent.</em></h2>
-          <p class="sub reveal">Données et noms clients anonymisés.</p>
-
-          <div class="project reveal">
-            <div>
-              <div class="meta mono">Télécom · Opérations fibre</div>
-              <h3>Une équipe de 32 personnes qui ne trie plus ses mails à la main</h3>
-              <ul class="wins">
-                <li>
-                  <svg class="i"><use href="#i-check" /></svg
-                  ><span
-                    >Les demandes arrivent par e-mail et sont réparties automatiquement entre les
-                    agents.</span
-                  >
-                </li>
-                <li>
-                  <svg class="i"><use href="#i-check" /></svg
-                  ><span
-                    >Chaque délai est suivi en temps réel, avec un objectif de traitement de 15 minutes.</span
-                  >
-                </li>
-                <li>
-                  <svg class="i"><use href="#i-check" /></svg
-                  ><span>Le rapport hebdomadaire part tout seul, chaque samedi.</span>
-                </li>
-              </ul>
-              <div class="tags">
-                <span class="tag">JavaScript</span><span class="tag">SQL</span
-                ><span class="tag">React 18</span><span class="tag">Node.js</span
-                ><span class="tag">MySQL 8</span><span class="tag">Docker</span>
-              </div>
-            </div>
-            <div class="term" role="img" aria-label="Indicateurs du projet">
-              <div class="term-bar"><i></i><i></i><i></i><small>ops-dashboard — status</small></div>
-              <pre><span class="d">$</span> status --summary
-<span class="k">users</span>         32 agents actifs
-<span class="k">sla_target</span>    15 min (heures ouvrées)
-<span class="k">dispatch</span>      automatique · round-robin
-<span class="k">mail_watch</span>    temps réel
-<span class="k">report</span>        hebdo · envoi auto
-<span class="d">──────────────────────────────</span>
-<span class="w">●</span> conçu, développé et maintenu seul</pre>
-            </div>
-          </div>
-
-          <div class="project reveal">
-            <div>
-              <div class="meta mono">Gestion d'inventaire</div>
-              <h3>Savoir en un coup d'œil quel équipement est où</h3>
-              <ul class="wins">
-                <li>
-                  <svg class="i"><use href="#i-check" /></svg
-                  ><span>Un inventaire centralisé, consultable par toute l'équipe.</span>
-                </li>
-                <li>
-                  <svg class="i"><use href="#i-check" /></svg
-                  ><span>Une base solide, prête à grandir avec l'activité.</span>
-                </li>
-              </ul>
-              <div class="tags">
-                <span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">React</span
-                ><span class="tag">PostgreSQL</span>
-              </div>
-            </div>
-            <div class="term" role="img" aria-label="Architecture du projet">
-              <div class="term-bar"><i></i><i></i><i></i><small>netinventory — stack</small></div>
-              <pre><span class="d">$</span> docker compose ps
-<span class="k">api</span>    spring-boot:3   <span class="w">●</span> up
-<span class="k">web</span>    react:18        <span class="w">●</span> up
-<span class="k">db</span>     postgres        <span class="w">●</span> up</pre>
-            </div>
-          </div>
-
-          <div class="project reveal">
-            <div>
-              <div class="meta mono">Location de véhicules</div>
-              <h3>Une agence qui gère flotte, réservations et contrats au même endroit</h3>
-              <ul class="wins">
-                <li>
-                  <svg class="i"><use href="#i-check" /></svg
-                  ><span>Disponibilités visibles instantanément, fini les doubles réservations.</span>
-                </li>
-                <li>
-                  <svg class="i"><use href="#i-check" /></svg
-                  ><span>Clients, contrats et facturation reliés entre eux.</span>
-                </li>
-              </ul>
-              <div class="tags"><span class="tag">Full Stack</span><span class="tag">Réservations</span></div>
-            </div>
-            <div class="term" role="img" aria-label="Modules du projet">
-              <div class="term-bar"><i></i><i></i><i></i><small>rental — modules</small></div>
-              <pre><span class="d">$</span> ls modules/
-<span class="k">flotte/</span>   <span class="k">clients/</span>   <span class="k">reservations/</span>
-<span class="k">contrats/</span> <span class="k">planning/</span>  <span class="k">facturation/</span></pre>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- WHY -->
-      <section class="alt">
-        <div class="wrap">
-          <div class="label mono reveal">Pourquoi moi</div>
-          <h2 class="reveal">Un développeur qui <em>parle votre langue.</em></h2>
-          <p class="sub reveal">
-            Pas de jargon, pas de surprise. Juste un interlocuteur qui comprend votre métier et livre.
-          </p>
+          <h2 class="reveal">Ce que je fais</h2>
           <div class="why reveal">
             <div>
               <div class="ic">
-                <svg class="i"><use href="#i-talk" /></svg>
+                <svg
+                  class="i"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  aria-hidden="true"
+                >
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18" />
+                </svg>
               </div>
-              <h3>Je comprends le terrain</h3>
-              <p>
-                Je travaille moi-même en opérations. Je sais ce que c'est, un process qui coince un lundi
-                matin.
-              </p>
+              <h3>Site vitrine</h3>
+              <p>Un site rapide et clair pour être trouvé et contacté.</p>
             </div>
             <div>
               <div class="ic">
-                <svg class="i"><use href="#i-bolt" /></svg>
+                <svg
+                  class="i"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  aria-hidden="true"
+                >
+                  <rect x="3" y="3" width="7.5" height="9" rx="1.5" />
+                  <rect x="13.5" y="3" width="7.5" height="5" rx="1.5" />
+                  <rect x="13.5" y="11" width="7.5" height="10" rx="1.5" />
+                  <rect x="3" y="15" width="7.5" height="6" rx="1.5" />
+                </svg>
               </div>
-              <h3>Je livre en production</h3>
-              <p>
-                Mes outils sont utilisés tous les jours par de vraies équipes. Pas des démos qui restent dans
-                un tiroir.
-              </p>
+              <h3>Application &amp; outil de gestion</h3>
+              <p>Vos données, vos équipes et vos indicateurs au même endroit.</p>
             </div>
             <div>
               <div class="ic">
-                <svg class="i"><use href="#i-shield" /></svg>
+                <svg class="i" aria-hidden="true"><use href="#i-bolt" /></svg>
               </div>
-              <h3>Je cadre, j'explique, je tiens</h3>
-              <p>Formé au droit avant le code : périmètre clair, engagements écrits, délais respectés.</p>
+              <h3>Automatisation</h3>
+              <p>E-mails, rapports, tâches répétitives : traités automatiquement.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- CERTIFICATIONS -->
-      <section id="certifications" class="alt">
+      <section id="projets" class="alt">
         <div class="wrap">
-          <div class="label mono reveal">Certifications &amp; langages</div>
-          <h2 class="reveal">Des compétences <em>vérifiées.</em></h2>
-          <p class="sub reveal">
-            Une formation continue, et des outils maîtrisés en conditions réelles de production.
-          </p>
-          <div class="certs">
-            <div class="cert reveal">
-              <div class="badge duo">
-                <img class="lg" src="img/stack/git.svg" alt="" width="28" height="28" loading="lazy" /><img
-                  class="lg mono"
-                  src="img/stack/github.svg"
-                  alt=""
-                  width="28"
-                  height="28"
-                  loading="lazy"
-                />
+          <h2 class="reveal">Réalisations</h2>
+          <div class="works">
+            <article class="work reveal">
+              <div class="meta mono">Back-office</div>
+              <h3>Pilotage d'une équipe d'exploitation</h3>
+              <p>
+                Demandes reçues par e-mail et réparties automatiquement, suivi des délais, rapport
+                hebdomadaire.
+              </p>
+              <div class="tags">
+                <span class="tag">React</span><span class="tag">Node.js</span><span class="tag">MySQL</span>
               </div>
-              <div><b>Git &amp; GitHub</b><small>CI/CD de A à Z · Udemy · 2026</small></div>
-              <span class="ok"
-                ><svg class="i i-sm" aria-hidden="true"><use href="#i-check" /></svg>Certifié</span
-              >
-            </div>
-            <div class="cert reveal">
-              <div class="badge">
-                <img class="lg" src="img/stack/python.svg" alt="" width="28" height="28" loading="lazy" />
+            </article>
+            <article class="work reveal">
+              <div class="meta mono">Inventaire</div>
+              <h3>Gestion d'équipements réseau</h3>
+              <p>Un inventaire centralisé, consultable par toute l'équipe.</p>
+              <div class="tags">
+                <span class="tag">Spring Boot</span><span class="tag">React</span
+                ><span class="tag">PostgreSQL</span>
               </div>
-              <div><b>Python</b><small>Python Essentials · GoMyCode · 2026</small></div>
-              <span class="ok"
-                ><svg class="i i-sm" aria-hidden="true"><use href="#i-check" /></svg>Certifié</span
-              >
-            </div>
-            <div class="cert reveal">
-              <div class="badge">
-                <img class="lg" src="img/stack/docker.svg" alt="" width="28" height="28" loading="lazy" />
-              </div>
-              <div><b>Docker</b><small>Conteneurisation &amp; déploiement</small></div>
-              <span class="ok"
-                ><svg class="i i-sm" aria-hidden="true"><use href="#i-check" /></svg>Certifié</span
-              >
-            </div>
-            <div class="cert reveal">
-              <div class="badge">
-                <img class="lg" src="img/stack/kubernetes.svg" alt="" width="28" height="28" loading="lazy" />
-              </div>
-              <div><b>Kubernetes</b><small>Orchestration de conteneurs</small></div>
-              <span class="ok"
-                ><svg class="i i-sm" aria-hidden="true"><use href="#i-check" /></svg>Certifié</span
-              >
-            </div>
-          </div>
-          <div class="langs reveal">
-            <h3>Langages et technologies utilisés sur la plateforme de pilotage FTTH</h3>
-            <p>L'application en production, de la base de données jusqu'au déploiement.</p>
-            <div class="lang-grid">
-              <div>
-                <h4>Langages</h4>
-                <ul class="chips">
-                  <li>
-                    <img
-                      class="lg sm"
-                      src="img/stack/javascript.svg"
-                      alt=""
-                      width="28"
-                      height="28"
-                      loading="lazy"
-                    /><span>JavaScript</span>
-                  </li>
-                  <li>
-                    <img
-                      class="lg sm mono"
-                      src="img/stack/mysql.svg"
-                      alt=""
-                      width="28"
-                      height="28"
-                      loading="lazy"
-                    /><span>SQL</span>
-                  </li>
-                  <li>
-                    <img
-                      class="lg sm"
-                      src="img/stack/html5.svg"
-                      alt=""
-                      width="28"
-                      height="28"
-                      loading="lazy"
-                    /><span>HTML5</span>
-                  </li>
-                  <li>
-                    <img
-                      class="lg sm"
-                      src="img/stack/css3.svg"
-                      alt=""
-                      width="28"
-                      height="28"
-                      loading="lazy"
-                    /><span>CSS3</span>
-                  </li>
-                  <li>
-                    <img
-                      class="lg sm mono"
-                      src="img/stack/yaml.svg"
-                      alt=""
-                      width="28"
-                      height="28"
-                      loading="lazy"
-                    /><span>YAML</span>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h4>Front-end</h4>
-                <ul class="chips">
-                  <li>
-                    <img
-                      class="lg sm"
-                      src="img/stack/react.svg"
-                      alt=""
-                      width="28"
-                      height="28"
-                      loading="lazy"
-                    /><span>React 18</span>
-                  </li>
-                </ul>
-                <p class="note">SPA, composants, gestion des rôles</p>
-              </div>
-              <div>
-                <h4>Back-end &amp; données</h4>
-                <ul class="chips">
-                  <li>
-                    <img
-                      class="lg sm"
-                      src="img/stack/nodejs.svg"
-                      alt=""
-                      width="28"
-                      height="28"
-                      loading="lazy"
-                    /><span>Node.js</span>
-                  </li>
-                  <li>
-                    <img
-                      class="lg sm mono"
-                      src="img/stack/express.svg"
-                      alt=""
-                      width="28"
-                      height="28"
-                      loading="lazy"
-                    /><span>Express</span>
-                  </li>
-                  <li>
-                    <img
-                      class="lg sm mono"
-                      src="img/stack/mysql.svg"
-                      alt=""
-                      width="28"
-                      height="28"
-                      loading="lazy"
-                    /><span>MySQL 8</span>
-                  </li>
-                </ul>
-                <p class="note">Procédures et vues SQL, cron, IMAP, SMTP</p>
-              </div>
-              <div>
-                <h4>DevOps &amp; outils</h4>
-                <ul class="chips">
-                  <li>
-                    <img
-                      class="lg sm"
-                      src="img/stack/docker.svg"
-                      alt=""
-                      width="28"
-                      height="28"
-                      loading="lazy"
-                    /><span>Docker</span>
-                  </li>
-                  <li>
-                    <img
-                      class="lg sm"
-                      src="img/stack/nginx.svg"
-                      alt=""
-                      width="28"
-                      height="28"
-                      loading="lazy"
-                    /><span>Nginx</span>
-                  </li>
-                  <li>
-                    <img
-                      class="lg sm"
-                      src="img/stack/pm2.svg"
-                      alt=""
-                      width="28"
-                      height="28"
-                      loading="lazy"
-                    /><span>PM2</span>
-                  </li>
-                  <li>
-                    <img
-                      class="lg sm"
-                      src="img/stack/git.svg"
-                      alt=""
-                      width="28"
-                      height="28"
-                      loading="lazy"
-                    /><span>Git</span>
-                  </li>
-                  <li>
-                    <img
-                      class="lg sm mono"
-                      src="img/stack/github.svg"
-                      alt=""
-                      width="28"
-                      height="28"
-                      loading="lazy"
-                    /><span>GitHub</span>
-                  </li>
-                  <li>
-                    <img
-                      class="lg sm"
-                      src="img/stack/jira.svg"
-                      alt=""
-                      width="28"
-                      height="28"
-                      loading="lazy"
-                    /><span>Jira</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
+            </article>
+            <article class="work reveal">
+              <div class="meta mono">Location</div>
+              <h3>Agence de location de véhicules</h3>
+              <p>Flotte, réservations, clients et contrats réunis dans un seul outil.</p>
+              <div class="tags"><span class="tag">Full Stack</span><span class="tag">Réservations</span></div>
+            </article>
           </div>
         </div>
       </section>
 
-      <!-- PROCESS -->
-      <section>
+      <section id="methode">
         <div class="wrap">
-          <div class="label mono reveal">Comment ça se passe</div>
-          <h2 class="reveal">Simple, clair, <em>sans surprise.</em></h2>
-          <p class="sub reveal">Vous savez à chaque étape où on en est et combien ça coûte.</p>
-          <div class="steps">
+          <h2 class="reveal">Comment ça marche</h2>
+          <div class="steps three">
             <div class="step reveal">
-              <h3>On échange</h3>
-              <p>15 à 30 minutes, gratuitement, pour comprendre votre besoin.</p>
+              <h3>Vous m'écrivez</h3>
+              <p>Quelques lignes suffisent pour décrire votre besoin.</p>
             </div>
             <div class="step reveal">
-              <h3>Je vous propose</h3>
-              <p>Périmètre, planning et devis précis, sous 48 h.</p>
+              <h3>Je vous envoie un devis</h3>
+              <p>Prix fixe et délai précis, sous 48 h.</p>
             </div>
             <div class="step reveal">
-              <h3>Je construis</h3>
-              <p>Vous voyez l'avancement régulièrement et donnez votre avis.</p>
-            </div>
-            <div class="step reveal">
-              <h3>On met en ligne</h3>
-              <p>Déploiement, prise en main, et je reste disponible après.</p>
-            </div>
-          </div>
-          <div class="promises reveal">
-            <div class="promise">
-              <svg class="i"><use href="#i-check" /></svg>
-              <div><b>Devis fixe</b><span>Le prix annoncé est le prix payé.</span></div>
-            </div>
-            <div class="promise">
-              <svg class="i"><use href="#i-check" /></svg>
-              <div><b>Paiement par étapes</b><span>Vous payez au fil des livraisons.</span></div>
-            </div>
-            <div class="promise">
-              <svg class="i"><use href="#i-check" /></svg>
-              <div><b>Le code vous appartient</b><span>Remis avec sa documentation.</span></div>
-            </div>
-            <div class="promise">
-              <svg class="i"><use href="#i-check" /></svg>
-              <div><b>Suivi après livraison</b><span>Corrections incluses au démarrage.</span></div>
+              <h3>Je livre</h3>
+              <p>Point régulier, mise en ligne et suivi après livraison.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- FAQ -->
+      <section id="stack" class="alt">
+        <div class="wrap">
+          <h2 class="reveal">Technologies</h2>
+          <ul class="chips stack-row reveal">
+            <li>
+              <img class="lg sm" src="img/stack/git.svg" alt="" width="20" height="20" loading="lazy" /><span
+                >Git</span
+              ><em class="ok"
+                ><svg class="i i-sm" aria-hidden="true"><use href="#i-check" /></svg>certifié</em
+              >
+            </li>
+            <li>
+              <img
+                class="lg sm mono"
+                src="img/stack/github.svg"
+                alt=""
+                width="20"
+                height="20"
+                loading="lazy"
+              /><span>GitHub</span
+              ><em class="ok"
+                ><svg class="i i-sm" aria-hidden="true"><use href="#i-check" /></svg>certifié</em
+              >
+            </li>
+            <li>
+              <img
+                class="lg sm"
+                src="img/stack/python.svg"
+                alt=""
+                width="20"
+                height="20"
+                loading="lazy"
+              /><span>Python</span
+              ><em class="ok"
+                ><svg class="i i-sm" aria-hidden="true"><use href="#i-check" /></svg>certifié</em
+              >
+            </li>
+            <li>
+              <img
+                class="lg sm"
+                src="img/stack/docker.svg"
+                alt=""
+                width="20"
+                height="20"
+                loading="lazy"
+              /><span>Docker</span
+              ><em class="ok"
+                ><svg class="i i-sm" aria-hidden="true"><use href="#i-check" /></svg>certifié</em
+              >
+            </li>
+            <li>
+              <img
+                class="lg sm"
+                src="img/stack/kubernetes.svg"
+                alt=""
+                width="20"
+                height="20"
+                loading="lazy"
+              /><span>Kubernetes</span
+              ><em class="ok"
+                ><svg class="i i-sm" aria-hidden="true"><use href="#i-check" /></svg>certifié</em
+              >
+            </li>
+            <li>
+              <img
+                class="lg sm"
+                src="img/stack/javascript.svg"
+                alt=""
+                width="20"
+                height="20"
+                loading="lazy"
+              /><span>JavaScript</span>
+            </li>
+            <li>
+              <img
+                class="lg sm"
+                src="img/stack/react.svg"
+                alt=""
+                width="20"
+                height="20"
+                loading="lazy"
+              /><span>React</span>
+            </li>
+            <li>
+              <img
+                class="lg sm"
+                src="img/stack/nodejs.svg"
+                alt=""
+                width="20"
+                height="20"
+                loading="lazy"
+              /><span>Node.js</span>
+            </li>
+            <li>
+              <img
+                class="lg sm mono"
+                src="img/stack/express.svg"
+                alt=""
+                width="20"
+                height="20"
+                loading="lazy"
+              /><span>Express</span>
+            </li>
+            <li>
+              <img
+                class="lg sm mono"
+                src="img/stack/mysql.svg"
+                alt=""
+                width="20"
+                height="20"
+                loading="lazy"
+              /><span>MySQL</span>
+            </li>
+            <li>
+              <img
+                class="lg sm"
+                src="img/stack/html5.svg"
+                alt=""
+                width="20"
+                height="20"
+                loading="lazy"
+              /><span>HTML5</span>
+            </li>
+            <li>
+              <img class="lg sm" src="img/stack/css3.svg" alt="" width="20" height="20" loading="lazy" /><span
+                >CSS3</span
+              >
+            </li>
+            <li>
+              <img
+                class="lg sm"
+                src="img/stack/nginx.svg"
+                alt=""
+                width="20"
+                height="20"
+                loading="lazy"
+              /><span>Nginx</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
       <section id="faq">
         <div class="wrap">
-          <div class="label mono reveal">Questions fréquentes</div>
-          <h2 class="reveal">Vous vous posez <em>sûrement la question.</em></h2>
+          <h2 class="reveal">Questions fréquentes</h2>
           <div class="faq reveal">
             <details>
-              <summary>Je ne suis pas technique, est-ce un problème ?</summary>
+              <summary>Je ne suis pas technique, est-ce un problème ?</summary>
               <p>
-                Pas du tout, c'est même le cas de la plupart de mes clients. Vous m'expliquez votre problème
-                avec vos mots, je traduis en solution technique et je vous explique chaque choix simplement.
+                Non. Vous expliquez votre besoin avec vos mots, je vous propose une solution simple et je vous
+                explique chaque choix.
               </p>
             </details>
             <details>
-              <summary>Combien coûte un projet ?</summary>
+              <summary>Combien ça coûte ?</summary>
               <p>
-                Chaque projet est différent, c'est pourquoi tout est sur devis. Après un premier échange
-                gratuit, vous recevez un devis fixe et détaillé : pas de mauvaise surprise.
+                Tout est sur devis : chaque projet est différent. Le devis est gratuit, fixe et sans
+                engagement.
               </p>
             </details>
             <details>
-              <summary>Combien de temps faut-il ?</summary>
+              <summary>Combien de temps faut-il ?</summary>
               <p>
-                De quelques jours pour un site ou une petite automatisation, à quelques semaines pour une
-                application complète. Le planning est fixé dans le devis.
-              </p>
-            </details>
-            <details>
-              <summary>On peut travailler à distance ?</summary>
-              <p>
-                Oui. Je travaille depuis Casablanca avec des clients partout : appels vidéo, WhatsApp, e-mail.
-                Un rendez-vous sur place est possible à Casablanca et ses environs.
-              </p>
-            </details>
-            <details>
-              <summary>Et après la mise en ligne ?</summary>
-              <p>
-                Je reste disponible. Les corrections sont incluses au démarrage, et on peut prévoir un suivi
-                pour les évolutions et la maintenance.
-              </p>
-            </details>
-            <details>
-              <summary>Mon projet est-il trop petit (ou trop gros) ?</summary>
-              <p>
-                Aucun projet n'est trop petit pour en parler. S'il dépasse ce que je peux faire seul, je vous
-                le dirai honnêtement dès le premier échange.
+                De quelques jours pour un site à quelques semaines pour une application. Le délai est fixé
+                dans le devis.
               </p>
             </details>
           </div>
         </div>
       </section>
 
-      <!-- CONTACT -->
       <section id="contact" class="alt">
         <div class="wrap contact">
           <div>
-            <div class="label mono reveal">Contact</div>
-            <h2 class="reveal">Parlons de <em>votre projet.</em></h2>
-            <p class="sub flush reveal">
-              Le premier échange est gratuit et sans engagement. Choisissez le moyen qui vous arrange.
-            </p>
+            <h2 class="reveal">Demander un devis</h2>
+            <p class="sub flush reveal">Gratuit et sans engagement. Réponse sous 24 h.</p>
             <div class="quick reveal">
               <a href="#" class="js-wa"
                 ><span class="ic wa"
-                  ><svg class="i"><use href="#i-wa" /></svg></span
-                ><span><b>WhatsApp</b><small>Le plus rapide · réponse dans la journée</small></span></a
+                  ><svg class="i" aria-hidden="true"><use href="#i-wa" /></svg></span
+                ><span><b>WhatsApp</b><small>Le plus rapide</small></span></a
               >
               <a href="mailto:contact.mghamraoui@gmail.com"
                 ><span class="ic"
-                  ><svg class="i"><use href="#i-mail" /></svg></span
+                  ><svg class="i" aria-hidden="true"><use href="#i-mail" /></svg></span
                 ><span><b>E-mail</b><small>contact.mghamraoui@gmail.com</small></span></a
-              >
-              <a href="#" id="cal-link" hidden
-                ><span class="ic"
-                  ><svg class="i"><use href="#i-cal" /></svg></span
-                ><span><b>Réserver un appel</b><small>15 min en visio, gratuit</small></span></a
-              >
-              <a href="https://github.com/mghamraoui4" target="_blank" rel="noopener"
-                ><span class="ic"
-                  ><svg class="i"><use href="#i-gh" /></svg></span
-                ><span><b>GitHub</b><small>@mghamraoui4</small></span></a
               >
             </div>
           </div>
@@ -963,84 +494,54 @@
           <div class="reveal">
             <form id="form" novalidate>
               <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" />
-              <div class="recap" id="recap">
-                <span id="recap-txt"></span><button type="button" id="recap-x">retirer</button>
-              </div>
               <div>
-                <p class="field-label" id="type-label">Votre demande concerne</p>
-                <div class="types" role="radiogroup" aria-labelledby="type-label">
+                <p class="field-label" id="besoin-label">Votre besoin</p>
+                <div class="types" role="radiogroup" aria-labelledby="besoin-label">
                   <label
-                    ><input type="radio" name="type" value="Projet freelance" checked /><span
-                      >Un nouveau projet</span
+                    ><input type="radio" name="besoin" value="Site vitrine" checked /><span
+                      >Site vitrine</span
                     ></label
                   >
                   <label
-                    ><input type="radio" name="type" value="Assistance technique" /><span
-                      >De l'assistance</span
+                    ><input type="radio" name="besoin" value="Application / outil de gestion" /><span
+                      >Application</span
                     ></label
                   >
-                  <label><input type="radio" name="type" value="Autre" /><span>Autre</span></label>
+                  <label
+                    ><input type="radio" name="besoin" value="Automatisation" /><span
+                      >Automatisation</span
+                    ></label
+                  >
+                  <label><input type="radio" name="besoin" value="Autre" /><span>Autre</span></label>
                 </div>
               </div>
               <div class="row">
-                <label
-                  >Votre nom<input name="nom" required autocomplete="name" placeholder="Prénom Nom"
-                /></label>
-                <label
-                  >Votre e-mail<input
-                    type="email"
-                    name="email"
-                    required
-                    autocomplete="email"
-                    placeholder="vous@exemple.com"
-                /></label>
+                <label>Votre nom<input name="nom" required autocomplete="name" /></label>
+                <label>Votre e-mail<input type="email" name="email" required autocomplete="email" /></label>
               </div>
               <label
-                >Téléphone / WhatsApp <small>(optionnel, pour vous répondre plus vite)</small
-                ><input type="tel" name="telephone" autocomplete="tel" placeholder="+212 6 …"
+                >Téléphone <small>(optionnel)</small><input type="tel" name="telephone" autocomplete="tel"
               /></label>
               <label
-                >En quelques mots, votre besoin<textarea
+                >Votre message<textarea
                   name="message"
                   required
-                  placeholder="Ex. : on gère nos commandes sur Excel et on aimerait un outil plus simple…"
+                  placeholder="Décrivez votre besoin en quelques lignes"
                 ></textarea>
               </label>
               <button class="btn primary" type="submit">
-                <span class="lbl">Recevoir ma réponse gratuite</span>
-                <svg class="i arr"><use href="#i-arrow" /></svg>
+                <span class="lbl">Envoyer ma demande</span>
+                <svg class="i arr" aria-hidden="true"><use href="#i-arrow" /></svg>
               </button>
-              <p class="fine">Réponse sous 24 h ouvrées · Vos informations restent confidentielles</p>
               <p class="msg" id="msg" role="status" aria-live="polite"></p>
             </form>
             <div class="sent panel" id="sent">
               <div class="ic">
                 <svg class="i i-lg" aria-hidden="true"><use href="#i-check" /></svg>
               </div>
-              <h3>C'est bien reçu !</h3>
-              <p>Je reviens vers vous sous 24 h ouvrées. Pressé ? Écrivez-moi directement.</p>
-              <a href="#" class="btn wa js-wa"
-                ><svg class="i"><use href="#i-wa" /></svg>Continuer sur WhatsApp</a
-              >
+              <h3>Demande bien reçue !</h3>
+              <p>Je vous réponds sous 24 h.</p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- FINAL CTA -->
-      <section class="final">
-        <div class="wrap">
-          <h2 class="reveal">Et si on commençait <em>aujourd'hui ?</em></h2>
-          <p class="sub reveal">
-            Un message suffit. Dans le pire des cas, vous repartez avec des conseils gratuits.
-          </p>
-          <div class="actions reveal">
-            <a href="#contact" class="btn primary"
-              >Décrire mon projet <svg class="i arr"><use href="#i-arrow" /></svg
-            ></a>
-            <a href="#" class="btn wa js-wa"
-              ><svg class="i"><use href="#i-wa" /></svg>WhatsApp</a
-            >
           </div>
         </div>
       </section>
@@ -1049,39 +550,21 @@
     <footer>
       <div class="wrap mono">
         <span>© <span id="year"></span> Mohamed GH. · Développeur Full Stack · Casablanca</span>
-        <a href="#top">Retour en haut ↑</a>
+        <a href="#top">Haut de page ↑</a>
       </div>
     </footer>
 
     <a href="#" class="fab js-wa" aria-label="Écrire sur WhatsApp"
-      ><span class="tip">Une question ? Écrivez-moi</span><svg><use href="#i-wa" /></svg
+      ><svg aria-hidden="true"><use href="#i-wa" /></svg
     ></a>
     <div class="mbar" id="mbar">
-      <a href="#estimer" class="btn primary">Demander un devis</a>
+      <a href="#contact" class="btn primary">Demander un devis</a>
       <a href="#" class="btn wa js-wa" aria-label="WhatsApp"
-        ><svg class="i"><use href="#i-wa" /></svg
+        ><svg class="i" aria-hidden="true"><use href="#i-wa" /></svg
       ></a>
     </div>
 
-    <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mtitle">
-      <div class="modal-box">
-        <button class="x" id="mclose" aria-label="Fermer">
-          <svg class="i"><use href="#i-x" /></svg>
-        </button>
-        <div class="mono accent">Avant de partir</div>
-        <h3 id="mtitle">Un conseil gratuit <em>sur votre projet ?</em></h3>
-        <p>
-          Décrivez votre besoin en une phrase sur WhatsApp, je vous dis honnêtement ce qui est faisable. Sans
-          engagement.
-        </p>
-        <a href="#" class="btn wa js-wa"
-          ><svg class="i"><use href="#i-wa" /></svg>Poser ma question</a
-        >
-        <a href="#estimer" class="btn" id="mest">Décrire mon projet d'abord</a>
-      </div>
-    </div>
-
-    <script src="js/config.js?v=202610121202" defer></script>
-    <script src="js/main.js?v=202610121202" defer></script>
+    <script src="js/config.js?v=202610121207" defer></script>
+    <script src="js/main.js?v=202610121207" defer></script>
   </body>
 </html>
