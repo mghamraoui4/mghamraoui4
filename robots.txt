@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mghamraoui4.github.io/sitemap.xml
