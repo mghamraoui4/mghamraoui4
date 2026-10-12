@@ -1,70 +1,70 @@
-<picture>
-  <source media="(prefers-color-scheme: light)" srcset="banner-light.png">
-  <source media="(prefers-color-scheme: dark)" srcset="banner-dark.png">
-  <img src="assets/banner-light.png" alt="Mohamed GHAMRAOUI — Réseaux & Télécom · Fullstack · DevOps" width="100%">
-</picture>
+# mghamraoui4
 
-<p align="center">
-  <a href="https://www.linkedin.com/in/[ton-profil]">LinkedIn</a>
-  &nbsp;&nbsp;·&nbsp;&nbsp;
-  Casablanca, Maroc
-  &nbsp;&nbsp;·&nbsp;&nbsp;
-  Ouvert aux opportunités Fullstack &amp; DevOps
-</p>
+Site vitrine de mon activité de développeur Full Stack freelance : présentation, simulateur de projet et prise de contact.
 
-<br>
+Site statique, sans framework ni étape de build, déployé sur GitHub Pages.
 
-### À propos
+En ligne : https://mghamraoui4.github.io/mghamraoui4/
 
-J’ai commencé sur le terrain, dans les réseaux et la fibre optique. J’y ai appris ce qui fait tenir une infrastructure : la rigueur, la supervision, la capacité à diagnostiquer vite. Je suis devenu développeur pour résoudre les problèmes que je voyais chaque jour, avec des outils pensés pour ceux qui les utilisent.
+## Stack
 
-Aujourd’hui, je conçois des applications web de bout en bout et je fais évoluer ma pratique vers le **DevOps** : automatiser, fiabiliser, déployer proprement.
+- HTML, CSS et JavaScript natifs
+- [Web3Forms](https://web3forms.com) pour l'envoi du formulaire de contact
+- Polices Geist, Geist Mono et Instrument Serif (Google Fonts)
+- Logos techniques : [Devicon](https://devicon.dev) (MIT)
 
-<br>
+## Structure
 
-### Ce que j’apporte
+```
+.
+├── index.html
+├── 404.html
+├── css/styles.css
+├── js/
+│   ├── config.js     # coordonnées, horaires, données du simulateur
+│   └── main.js       # thème, simulateur, animation, formulaire
+├── img/
+│   ├── photo.jpg / photo.webp
+│   ├── og-image.jpg  # aperçu de partage (1200 × 630)
+│   └── stack/        # logos des technologies
+├── favicon.svg
+└── sitemap.xml
+```
 
-<table>
-  <tr>
-    <td width="33%" valign="top">
-      <b>Infrastructure</b><br><br>
-      Réseaux IP et FTTH, exploitation, diagnostic d’incidents, lecture d’un système dans son ensemble.
-    </td>
-    <td width="33%" valign="top">
-      <b>Applications</b><br><br>
-      Applications métier complètes : modélisation des données, API, interfaces claires et rapides à prendre en main.
-    </td>
-    <td width="33%" valign="top">
-      <b>Delivery</b><br><br>
-      Conteneurisation, pipelines CI/CD, environnements reproductibles, mise en production maîtrisée.
-    </td>
-  </tr>
-</table>
+## Développement local
 
-<br>
+```bash
+python3 -m http.server 8000
+# puis http://localhost:8000
+```
 
-### Stack
+Formatage : `npx prettier --write .`
 
-<p>
-  <img src="https://skillicons.dev/icons?i=react,ts,js,html,css&theme=dark" height="40" alt="Front-end">
-  <br><br>
-  <img src="https://skillicons.dev/icons?i=nodejs,express,mongodb,postgres&theme=dark" height="40" alt="Back-end et données">
-  <br><br>
-  <img src="https://skillicons.dev/icons?i=docker,githubactions,linux,bash,git,github&theme=dark" height="40" alt="DevOps et outils">
-</p>
+## Configuration
 
-**En cours d’approfondissement** — Kubernetes · Azure · Infrastructure as Code
+Tout se règle dans `js/config.js` :
 
-<br>
+| Clé            | Rôle                                                              |
+| -------------- | ----------------------------------------------------------------- |
+| `web3formsKey` | Clé d'accès Web3Forms. Vide : le formulaire bascule sur WhatsApp. |
+| `whatsapp`     | Numéro au format international, chiffres uniquement.              |
+| `calendly`     | Lien de prise de rendez-vous. Vide : l'option est masquée.        |
+| `hours`        | Plage de disponibilité affichée (heure de Casablanca).            |
+| `showPrices`   | Affiche ou non les fourchettes de prix dans le simulateur.        |
 
-### Principes de travail
+Les fourchettes de prix et délais du simulateur sont définies dans l'objet `NEEDS`.
 
-**Partir du terrain.** Un outil n’a de valeur que s’il répond à un vrai besoin d’utilisateur.<br>
-**Faire simple.** La solution la plus lisible est souvent la plus durable.<br>
-**Rendre fiable.** Ce qui n’est ni testé, ni supervisé, ni reproductible n’est pas terminé.
+### Formulaire de contact
 
-<br>
+1. Créer une clé sur [web3forms.com](https://web3forms.com) avec l'adresse de réception.
+2. La renseigner dans `web3formsKey`.
 
----
+Chaque demande arrive par e-mail avec l'objet `[Type] Nouvelle demande de <Nom>`, la simulation éventuelle, et l'adresse du client en réponse directe.
 
-<p align="center"><sub>Du droit aux réseaux, des réseaux au code.</sub></p>
+## Déploiement
+
+Le dépôt est publié par GitHub Pages depuis la branche `main` (racine). Le fichier `.nojekyll` désactive le traitement Jekyll.
+
+## Licence
+
+Code : tous droits réservés. Logos : propriété de leurs détenteurs respectifs.
